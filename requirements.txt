@@ -3,10 +3,6 @@ astroid==2.4.2
 attrs==20.3.0
 autobahn==21.3.1
 Automat==20.2.0
-beautifulsoup4==4.9.3
-binance==0.3
-binance-client==1.0.0
-bs4==0.0.1
 cachelib==0.1.1
 cachetools==4.2.1
 certifi==2020.12.5
@@ -20,7 +16,6 @@ cssselect==1.1.0
 cssutils==2.2.0
 dateparser==1.0.0
 email-to==0.1.0
-fake-useragent==0.1.11
 Flask==1.1.2
 Flask-Session==0.3.2
 future==0.18.2
@@ -41,7 +36,6 @@ mime==0.1.0
 mysql-connector==2.2.9
 mysql-connector-python==8.0.23
 mysqlclient==2.0.3
-notify-run==0.0.13
 numpy==1.20.1
 parse==1.19.0
 premailer==3.7.0
@@ -55,7 +49,6 @@ pylint==2.6.0
 pyOpenSSL==20.0.1
 pyppdf==0.1.2
 pyppeteer==0.2.5
-PyQRCode==1.2.1
 pyquery==1.4.3
 python-binance==0.7.9
 python-dateutil==2.8.1
@@ -67,7 +60,6 @@ secure-smtplib==0.1.1
 service-identity==18.1.0
 six==1.15.0
 soupsieve==2.2
-toml==0.10.2
 tqdm==4.58.0
 txaio==21.2.1
 tzlocal==2.1
@@ -77,4 +69,3 @@ w3lib==1.22.0
 websockets==8.1
 Werkzeug==1.0.1
 wrapt==1.12.1
-zope.interface==5.2.0
