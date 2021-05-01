@@ -61,7 +61,7 @@
                         <div class="second circle" style="background-color: transparent;"data-percent="{{(usuario.totalEcopuntos - nivel.minimoEcoPuntos)*100/(nivel.maximoEcoPuntos - nivel.minimoEcoPuntos)}}">
                           <strong id="cantEP"><br><span id="label-ep">EcoPuntos</span></strong>
                           <span id="label-nivel">Nivel {{nivel.nombre}}<br></span>
-                          {%if nivel.nombre|int == max_level|int%}}
+                          {%if nivel.nombre|int == max_level|int%}
                           <span class="product-save" style="width: 130%; margin-left: -15%;">¡Felicitaciones! Ya alcanzaste el máximo nivel.</span>
                           {%else%}
                           <span class="product-save" style="width: 130%; margin-left: -15%;">Te faltan {{(nivel.maximoEcoPuntos - usuario.totalEcopuntos)|round|int}} EcoPuntos para subir de nivel</span>

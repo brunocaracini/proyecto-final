@@ -1,10 +1,100 @@
-  ::-webkit-scrollbar {
+ ::-webkit-scrollbar {
 	width: 8px;
   }
 
+/*Modo noche*/
+body,#heading-container,.subheading,#content,#loadingRowPuntos,#top-container,#products-container{
+	background-color: #161b21ff !important;
+}
+
+h1,h2,h3,h4,h5,h6,h7,p,a,textarea,input,li,.nav-link,.nav-item,tr,th,td,.nav-link,option,select,#cantEP,.nav-link,#home-tab,#profile-tab,#security-tab{
+	color: #d3d9e2 !important;
+}
+
+label{
+	color: #95C22B !important;
+}
+
+.material-card-subtitle{
+	color: rgb(177, 177, 177) !important;
+}
+
+thead tr th{
+	border-bottom: 3px solid #3c4652 !important;
+}
+
+tbody td{
+	border-top: 2px solid #3c4652 !important;
+}
+
+tbody th{
+	border-top: 2px solid #3c4652 !important;
+}
+
+.container, #sidebar,#up-bar,.modal-body,.modal-footer,.modal-header,input,select,.modal-content,select,.numberCircle,#table-container,#content-table,.menu-option-box,.card-product,#nombreArtInput,.list-group,li,ul,.electpicker,.selectpicker-nooutline,textarea,.data-show-input,#dateInputSM,#dateInputSE,#slideInput,.range{
+  background-color:#1f2630 !important;
+}
+
+.nav-item,.nav-link.active{
+	background-color:#1f2630 !important;
+}
+
+.ed-tabs .ed-link:hover, .ed-tabs .ed-link:hover,.nav-tabs .nav-link:focus:hover, .nav-tabs .nav-link:hover{
+	background:#2d323a !important;
+}
+
+.modal-large-card-sm, .modal-large-card{
+	border: 1px solid rgb(66, 66, 66) !important;
+}
+
+.nav-item:active{
+	background-color:#1f2630 !important;
+}
+
+#night-mode:hover{
+	cursor: pointer;
+	color: lightgray;
+}
+
+span{
+	color: white;
+}
+
+#night-mode{
+	padding-top: 17px;
+}
+
+#theme-label,.fa-sun{
+	color: #95C22B;
+}
+
+.info-result{
+	color: #95C22B !important;
+}
+
+.secondary-btn{
+	color: white;
+}
+
+.secondary-btn.hover{
+	color:#1f2630;
+}
+
+#content-table,.content-table-main{
+	border-top: 2px solid #1f2630 !important;
+}
+
+#up-bar{
+	border-bottom: 2px solid #1f2630 !important;
+}
+
+.img-wrap{
+	border-bottom: 2px solid #1f2630 !important;
+}
+
   /* Track */
   ::-webkit-scrollbar-track {
-	background: #ffffff; 
+	background: #1f2630; 
   }
    
   /* Handle */
@@ -16,16 +106,20 @@
   ::-webkit-scrollbar-thumb:hover {
 	background: rgb(177, 177, 177); 
   }
+  
+/*Fin Modo noche*/
 
-  #night-mode{
-	padding-top: 17px;
-	color: #c2c2c2;
-}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: rgb(202, 202, 202); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgb(177, 177, 177); 
+  }
 
-	#night-mode:hover{
-		cursor: pointer;
-		color: #95C22B;
-	}
   
   #up-bar{
 	background-color: rgb(255, 255, 255); 
@@ -94,9 +188,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 	font-size: 14px;
 }
 
-#dateInputSM,#dateInputSE{
-	background-color: white !important;
-}
+
 
 #reference:hover{
 	color:#fff

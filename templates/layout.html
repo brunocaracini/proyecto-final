@@ -8,7 +8,6 @@
     <title>EcoAsitente</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/layout.css')}}">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,14 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;600&display=swap" rel="stylesheet">      
 </head>
 
-
-<body style="background-color: #f8f9fa;">
+<body style="background-color: #f8f9fa; display: none;">
  <!-- Vertical navbar -->
 <div class="vertical-nav" id="sidebar">
     <div class="py-4 px-3 mb-4">
       <div class="media d-flex align-items-center">
-        <div class="media-body">
-          <h4 class="m-0" onclick="window.location.href='/main'" id="navbar-title"><img src="/static/img/logo-gris.png" width="77.5%" alt="" style="margin-top: -20px !important;transform: translateZ(0);"></h4>
+        <div class="media-body" id="media-body">
+          <h4 class="m-0" onclick="window.location.href='/main'" id="navbar-title"><img src="/static/img/logo-gris.png" width="77.5%" id="img-nav-bar" alt="" style="margin-top: -20px !important;transform: translateZ(0); display: none;"></h4>
         </div>
       </div>
     </div>
@@ -34,79 +32,79 @@
     
       <ul class="nav flex-column mb-0">
         <li class="nav-item">
-          <a href="/main" class="nav-link text-dark font-italic">
+          <a href="/main" class="nav-link text-light font-italic">
                     <i class="fa fa-home mr-3 fa-fw" id="nav-link-option"></i>
                     Home
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/perfil" class="nav-link text-dark font-italic">
+          <a href="/perfil" class="nav-link text-light font-italic">
                     <i class="fa fa-address-card mr-3 fa-fw" id="nav-link-option"></i>
                     Perfil
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/eco-tienda" class="nav-link text-dark font-italic">
+          <a href="/eco-tienda" class="nav-link text-light font-italic">
                     <i class="fa fa-shopping-bag mr-3 fa-fw" id="nav-link-option"></i>
                     EcoTienda
                 </a>
         </li>
         <li class="nav-item">
-          <a href='/gestion-pedidos/usuario' class="nav-link text-dark font-italic">
+          <a href='/gestion-pedidos/usuario' class="nav-link text-light font-italic">
                     <i class="fa fa-paper-plane mr-3 fa-fw" id="nav-link-option"></i>
                     Mis Pedidos
                 </a>
         </li>
         <li class="nav-item">
-          <a href='/depositos/usuario' class="nav-link text-dark font-italic">
+          <a href='/depositos/usuario' class="nav-link text-light font-italic">
                     <i class="fa fa-recycle mr-3 fa-fw" id="nav-link-option"></i>
                     Mis Depósitos
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/simulador" class="nav-link text-dark font-italic">
+          <a href="/simulador" class="nav-link text-light font-italic">
                 <i class="fa fa-leaf mr-3 fa-fw" id="nav-link-option"></i>
                     Simular Depósito
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/codigo" class="nav-link text-dark font-italic">
+          <a href="/codigo" class="nav-link text-light font-italic">
                 <i class="fa fa-receipt mr-3 fa-fw" id="nav-link-option"></i>
                     Canjear Código
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/encontrar-punto-deposito" class="nav-link text-dark font-italic">
+          <a href="/encontrar-punto-deposito" class="nav-link text-light font-italic">
               <i class="fa fa-compass mr-3 fa-fw" id="nav-link-option"></i>
                     Puntos de Depósito
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/encontrar-punto-retiro" class="nav-link text-dark font-italic">
+          <a href="/encontrar-punto-retiro" class="nav-link text-light font-italic">
                 <i class="fas fa-map-marked-alt mr-3 fa-fw" id="nav-link-option"></i>
                     Puntos de Retiro
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/info-niveles" class="nav-link text-dark font-italic">
+          <a href="/info-niveles" class="nav-link text-light font-italic">
                 <i class="fa fa-trophy mr-3 fa-fw" id="nav-link-option"></i>
                     Tabla de Niveles
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/eco-tips" class="nav-link text-dark font-italic">
+          <a href="/eco-tips" class="nav-link text-light font-italic">
                 <i class="fas fa-lightbulb mr-3 fa-fw" id="nav-link-option"></i>
                     EcoTips
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/ayuda-faq" class="nav-link text-dark font-italic">
+          <a href="/ayuda-faq" class="nav-link text-light font-italic">
                     <i class="fa fa-question mr-3 fa-fw" id="nav-link-option"></i>
                     Ayuda
                 </a>
         </li>
         <li class="nav-item">
-          <a href="/logout/true" class="nav-link text-dark font-italic">
+          <a href="/logout/true" class="nav-link text-light font-italic">
                     <i class="fas fa-sign-out-alt mr-3 fa-fw" id="nav-link-option"></i>
                     Logout
                 </a>
@@ -117,85 +115,85 @@
     
       <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item" style="display:none" id="layout-li-pedidos">
-          <a href="/elegir-PR" class="nav-link text-dark font-italic">
+          <a href="/elegir-PR" class="nav-link text-light font-italic">
                     <i class="fa fa-paper-plane mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Pedidos
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-depositos">
-          <a href="/elegir-PD" class="nav-link text-dark font-italic">
+          <a href="/elegir-PD" class="nav-link text-light font-italic">
                     <i class="fa fa-recycle mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Depositos
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-articulos">
-          <a href="/articulos" class="nav-link text-dark font-italic">
+          <a href="/articulos" class="nav-link text-light font-italic">
                     <i class="fa fa-box mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Artículos
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-insumos">
-          <a href="/insumos" class="nav-link text-dark font-italic">
+          <a href="/insumos" class="nav-link text-light font-italic">
                     <i class="fa fa-pallet mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Insumos
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-materiales">
-          <a href="/materiales" class="nav-link text-dark font-italic">
+          <a href="/materiales" class="nav-link text-light font-italic">
                     <i class="fa fa-truck-loading mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Materiales
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-stock">
-          <a href="/gestion-stock" class="nav-link text-dark font-italic">
+          <a href="/gestion-stock" class="nav-link text-light font-italic">
                     <i class="fas fa-boxes mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Stock
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-produccion">
-          <a href="/produccion" class="nav-link text-dark font-italic">
+          <a href="/produccion" class="nav-link text-light font-italic">
                     <i class="fa fa-industry mr-3 fa-fw" id="nav-link-option"></i>
                     Producción
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-usuarios">
-          <a href="/elegir-tipo-gu" class="nav-link text-dark font-italic">
+          <a href="/elegir-tipo-gu" class="nav-link text-light font-italic">
                     <i class="fa fa-users mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Usuarios
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-entidades">
-          <a href="/gestion-ed" class="nav-link text-dark font-italic">
+          <a href="/gestion-ed" class="nav-link text-light font-italic">
                     <i class="fa fa-building mr-3 fa-fw" id="nav-link-option"></i>
                     Entidades Destino
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-niveles">
-          <a href="/gestion-niveles" class="nav-link text-dark font-italic">
+          <a href="/gestion-niveles" class="nav-link text-light font-italic">
                     <i class="fa fa-trophy mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de niveles
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-puntos">
-          <a href="/elegir-tipo-punto" class="nav-link text-dark font-italic">
+          <a href="/elegir-tipo-punto" class="nav-link text-light font-italic">
                 <i class="fa fa-map-marker-alt mr-3 fa-fw" id="nav-link-option"></i>
                     Gestión de Puntos
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-reportes">
-          <a href="/reportes-admin" class="nav-link text-dark font-italic">
+          <a href="/reportes-admin" class="nav-link text-light font-italic">
                 <i class="fa fa-chart-pie mr-3 fa-fw" id="nav-link-option"></i>
                    Reportes
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-config">
-          <a href="/config" class="nav-link text-dark font-italic">
+          <a href="/config" class="nav-link text-light font-italic">
                 <i class="fa fa-cog mr-3 fa-fw" id="nav-link-option"></i>
                    Configuración
                 </a>
         </li>
         <li class="nav-item" style="display:none" id="layout-li-ayuda">
-          <a href="/ayuda-admin" class="nav-link text-dark font-italic">
+          <a href="/ayuda-admin" class="nav-link text-light font-italic">
                     <i class="fa fa-question mr-3 fa-fw" id="nav-link-option"></i>
                     Ayuda Administrador
                 </a>
@@ -209,6 +207,13 @@
     <div class="justify-content-end" id="navbarNav">
       <ul class="navbar-nav justify-content-end">
       </ul>
+    </div>
+    <div class="form-inline my-2 my-lg-0 justify-content-start" style="width: 15%;" onclick="set_light_mode();">
+      <p class="user-username-text" id="night-mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span id="theme-label">Tema oscuro</span>
+      </p>
     </div>
     <form class="form-inline my-2 my-lg-0 justify-content-end" id="user-username">
         <!-- Icono del carrito --> 

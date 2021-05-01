@@ -110,6 +110,7 @@ def login():
 def authentication(email, password):
     try:
         session["usuario"] = NegocioUsuario.login(email, password)
+        session["light-mode"] = 'day'
         session.modified = True
         return jsonify({"login-state":True})
     except:
@@ -2056,7 +2057,27 @@ def config_cambio():
     except Exception as e:
         return error(e,"config")
 
+@app.route('/config/get-light-mode', methods = ['GET','POST'])
+def get_light_mode():
+    try:
+        return jsonify(session["light-mode"])
+    except: 
+        return jsonify('exeption')
 
+@app.route('/config/set-light-mode', methods = ['GET','POST'])
+def set_light_mode():
+    try:
+        print(session["light-mode"])
+        if session["light-mode"] == 'day':
+            session["light-mode"] = 'night'
+
+        elif session["light-mode"] == 'night':
+            session["light-mode"] = 'day'
+        print(session["light-mode"])
+        return jsonify(True)
+    except:
+        session["light-mode"] = 'day'
+        return jsonify(False)
 
 '''
     -----------------------
