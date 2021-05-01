@@ -68,6 +68,10 @@ span{
 	color: #95C22B;
 }
 
+.profile-nav-item{
+	border-bottom: 1px solid rgb(222,226,230) !important;
+}
+
 .info-result{
 	color: #95C22B !important;
 }
