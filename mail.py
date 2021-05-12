@@ -11,12 +11,12 @@ def send_mail(email_address, passwd, html_string, code):
     if debug:
         url = "http://localhost:5000/verificacion/" + code
     else:
-        url = "http://http://ecoasistente.duckdns.org/verificacion/" + code
+        url = "http://http://https://eco-asistente.herokuapp.com/verificacion/" + code
     
     print(url)
     #Datos de la cuenta.
     gmail_user = 'soporte.ecoasistente@gmail.com'
-    gmail_password = 'cornejoHijoDePuta567'
+    gmail_password = 'proyectoFinal123'
 
     #Instanciación del objeto email.message
     message = email.message.Message()
