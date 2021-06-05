@@ -11,7 +11,7 @@ def send_mail(email_address, passwd, html_string, code):
     if debug:
         url = "http://localhost:5000/verificacion/" + code
     else:
-        url = "http://http://https://eco-asistente.herokuapp.com/verificacion/" + code
+        url = "https://eco-asistente.herokuapp.com/verificacion/" + code
     
     print(url)
     #Datos de la cuenta.
