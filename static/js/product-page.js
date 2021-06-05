@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 function setTotalVal(priceEP, value, descuento){
     $("#old-value").text(Math.round(priceEP) * value);
-    $("#ep-savings").text(Math.round(priceEP) * descuento/100 * value);
+    $("#ep-savings").text(Math.round(Math.round(priceEP) * descuento/100 * value));
     priceEP = priceEP * value * (1-descuento/100);
     $("#total-value").fadeIn();
     $("#total-value").text(Math.round(parseFloat(priceEP)));
