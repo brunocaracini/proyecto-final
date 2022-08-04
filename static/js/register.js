@@ -5,7 +5,7 @@ var first_time = true;
 var first_time2 = true;
 var repeat_password = false;
 var domain = "";
-var emails = false;
+var emails = [];
 
 $.getJSON("/register/emails",function (result){
     emails = result;
